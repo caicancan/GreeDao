@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.brioal.ttstest.dao.DaoMaster;
 import com.brioal.ttstest.dao.DaoSession;
+import com.facebook.drawee.backends.pipeline.Fresco;
 
 /**
  * Created by n009654 on 2018/3/13.
@@ -21,9 +22,19 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instances = this;
+
+        //greenDao数据库的使用
         setDatabase();
+        //Fressco加载图片的使用
+        initFressco();
     }
+
+    private void initFressco() {
+        Fresco.initialize(this);
+    }
+
     public static MyApplication getInstances(){
+
         return instances;
     }
 

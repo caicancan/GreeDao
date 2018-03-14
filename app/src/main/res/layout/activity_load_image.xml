@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     tools:context="com.brioal.ttstest.activity.LoadImageActivity">
-
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:id="@+id/main_simple_drawee_view"
+        fresco:placeholderImage="@mipmap/ic_launcher"/>
 
 </RelativeLayout>
